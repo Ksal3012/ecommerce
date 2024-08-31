@@ -47,8 +47,8 @@
                         <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">FruitFusion@gmail.com</a></small>
                     </div>
                     <div class="top-link pe-2">
-                        <a href="#" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white mx-2">Terms of Use</small></a>
+                        <a href="privacy.html" class="text-white"><small class="text-white mx-2">Privacy Policy</small>/</a>
+                        <a href="terms.html" class="text-white"><small class="text-white mx-2">Terms of Use</small></a>
                     
                     </div>
                 </div>
@@ -68,10 +68,79 @@
                             
                         </div>
                         <div class="d-flex m-3 me-0">
-                            <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
+
+
+                            <!-- Search Input Field -->
+<input type="text" id="searchInput" class="form-control" placeholder="Enter item name..." style="width: 200px; display: inline-block;">
+
+<!-- Search Button -->
+<a href="#" onclick="performSearch()" class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4">
+    <i class="fas fa-search text-primary"></i>
+</a>
+
+<script>
+    // Define the threshold for recommendations
+    const searchThreshold = 3;
+ 
+    function performSearch() {
+        // Get the value from the input field
+        var item = document.getElementById('searchInput').value.toLowerCase();
+ 
+        // Check if the item exists in localStorage
+        if (localStorage.getItem(item)) {
+            // Increment the search count
+            localStorage.setItem(item, parseInt(localStorage.getItem(item)) + 1);
+        } else {
+            // Initialize the search count
+            localStorage.setItem(item, 1);
+        }
+ 
+        // Get the current search count for the item
+        var searchCount = parseInt(localStorage.getItem(item));
+ 
+        // Recommend the item if it has been searched for frequently
+        if (searchCount >= searchThreshold) {
+            alert(`You have searched for "${item}" ${searchCount} times. Would you like to know more about ${item}?`);
+        }
+ 
+        // Redirect to the corresponding page based on the item name
+        switch (item) {
+            case 'banana':
+                window.location.href = 'banana.html';
+                break;
+            case 'tomato':
+                window.location.href = 'tomato.html';
+                break;
+            case 'apricots':
+                window.location.href = 'Apricots.html';
+                break;
+            case 'grapes':
+                window.location.href = 'grapes.html';
+                break;
+            case 'raspberries':  // Fixed spelling from 'Rasberries' to 'raspberries'
+                window.location.href = 'Raspberries.html';
+                break;
+            case 'orange':
+                window.location.href = 'oranges.html';
+                break;
+            case 'potato':
+                window.location.href = 'potato.html';
+                break;
+            case 'bell pepper':
+                window.location.href = 'bell pepper.html';
+                break;
+            case 'parsley':  // Fixed spelling from 'parsely' to 'parsley'
+                window.location.href = 'parsley.html';
+                break;
+            default:
+                alert('Item not found!');
+                break;
+        }
+    }
+</script>
+
                             <a href="cart.html" class="position-relative me-4 my-auto">
                                 <i class="fa fa-shopping-bag fa-2x"></i>
-                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
                             </a>
                             <a href="#" class="my-auto">
                                 <i class="fas fa-user fa-2x">
@@ -89,7 +158,7 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-md-12 col-lg-7">
                         <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
-                        <h1 class="mb-5 display-3 text-primary">Organic Veggies & Fruits Foods</h1>
+                        <h1 class="mb-5 display-3 text-primary">Organic Veggies & Fruits </h1>
                       
                     </div>
                     <div class="col-md-12 col-lg-5">
@@ -101,7 +170,7 @@
                                 </div>
                                 <div class="carousel-item rounded">
                                     <img src="img/hero-img-2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                    <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
+                                    <a href="#" class="btn px-4 py-2 text-white rounded">Vegitables</a>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -128,7 +197,7 @@
                             </div>
                             <div class="featurs-content text-center">
                                 <h5>Free Shipping</h5>
-                                <p class="mb-0">Free on order over 300</p>
+                                <p class="mb-0">On order above 499</p>
                             </div>
                         </div>
                     </div>
@@ -139,7 +208,7 @@
                             </div>
                             <div class="featurs-content text-center">
                                 <h5>Security Payment</h5>
-                                <p class="mb-0">100% security payment</p>
+                                <p class="mb-0">100% secure payment</p>
                             </div>
                         </div>
                     </div>
@@ -149,8 +218,8 @@
                                 <i class="fas fa-exchange-alt fa-3x text-white"></i>
                             </div>
                             <div class="featurs-content text-center">
-                                <h5>30 Day Return</h5>
-                                <p class="mb-0">30 day money guarantee</p>
+                                <h5>3 Day Return</h5>
+                                <p class="mb-0">3 day money guarantee</p>
                             </div>
                         </div>
                     </div>
@@ -161,7 +230,7 @@
                             </div>
                             <div class="featurs-content text-center">
                                 <h5>24/7 Support</h5>
-                                <p class="mb-0">Support every time fast</p>
+                                <p class="mb-0">Fast and reliable Support</p>
                             </div>
                         </div>
                     </div>
@@ -173,7 +242,6 @@
             <div class="container py-5">
                 <div class="row g-4 justify-content-center">
                     <div class="col-md-6 col-lg-4">
-                        <a href="#">
                             <div class="service-item bg-secondary rounded border border-secondary">
                                 <img src="img/featur-1.jpg" class="img-fluid rounded-top w-100" alt="">
                                 <div class="px-4 rounded-bottom">
@@ -183,10 +251,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <a href="#">
                             <div class="service-item bg-dark rounded border border-dark">
                                 <img src="img/featur-2.jpg" class="img-fluid rounded-top w-100" alt="">
                                 <div class="px-4 rounded-bottom">
@@ -196,20 +262,17 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <a href="#">
                             <div class="service-item bg-primary rounded border border-primary">
                                 <img src="img/featur-3.jpg" class="img-fluid rounded-top w-100" alt="">
                                 <div class="px-4 rounded-bottom">
                                     <div class="service-content bg-secondary text-center p-4 rounded">
-                                        <h5 class="text-white">Exotic Vegitable</h5>
+                                        <h5 class="text-white">Exotic Vegetable</h5>
                                         <h3 class="mb-0">Discount 30%</h3>
                                     </div>
                                 </div>
                             </div>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -222,7 +285,6 @@
                         <div class="py-4">
                             <h1 class="display-3 text-white">Fresh Exotic Fruits</h1>
                             <p class="fw-normal display-3 text-dark mb-4">in Our Store</p>
-                            <p class="mb-4 text-dark">The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
                             
                         </div>
                     </div>
@@ -256,7 +318,7 @@
                                     <img src="img/best-product-1.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Oranges</a>
+                                    <div class="h5">Oranges</div>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
@@ -277,7 +339,7 @@
                                     <img src="img/best-product-2.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Raspberries</a>
+                                    <div class="h5">Raspberries</div>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
@@ -298,7 +360,7 @@
                                     <img src="img/best-product-3.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Banana</a>
+                                    <div class="h5">Banana</div>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
@@ -319,7 +381,7 @@
                                     <img src="img/best-product-4.jpg" class="img-fluid rounded-circle w-100" alt="">
                                 </div>
                                 <div class="col-6">
-                                    <a href="#" class="h5">Apricots</a>
+                                    <div class="h5">Apricots</div>
                                     <div class="d-flex my-3">
                                         <i class="fas fa-star text-primary"></i>
                                         <i class="fas fa-star text-primary"></i>
@@ -395,7 +457,7 @@
                             <div class="counter bg-white rounded p-5">
                                 <i class="fa fa-users text-secondary"></i>
                                 <h4>satisfied customers</h4>
-                                <h1>1963</h1>
+                                <h1>193</h1>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-3">
@@ -409,14 +471,14 @@
                             <div class="counter bg-white rounded p-5">
                                 <i class="fa fa-users text-secondary"></i>
                                 <h4>quality certificates</h4>
-                                <h1>33</h1>
+                                <h1>13</h1>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-3">
                             <div class="counter bg-white rounded p-5">
                                 <i class="fa fa-users text-secondary"></i>
                                 <h4>Available Products</h4>
-                                <h1>789</h1>
+                                <h1>9</h1>
                             </div>
                         </div>
                     </div>
@@ -441,8 +503,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="position-relative mx-auto">
-                                <input class="form-control border-0 w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email">
-                                <button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 0;">Subscribe Now</button>
+                            <a href="contact.html" button type="submit" class="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style="top: 0; right: 38%;">Subscribe Now</button> </a>
                             </div>
                         </div>
                         <div class="col-lg-3">

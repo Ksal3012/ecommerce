@@ -185,14 +185,14 @@
                             <div class="col-lg-6">
                                 <div class="border rounded">
                                     <a href="#">
-                                        <img src="img/fruite-item-2.jpg" class="img-fluid rounded" alt="Image">
+                                        <img src="img/fruite-item-1.jpg" class="img-fluid rounded" alt="Image">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <h4 class="fw-bold mb-3" id="product-name">Rasberries</h4>
+                                <h4 class="fw-bold mb-3" id="product-name">Oranges</h4>
                                 <p class="mb-3">Category: <span id="product-category">Fruit</span></p>
-                                <h5 class="fw-bold mb-3">Rs. <span id="product-price">620</span> / Kg</h5>
+                                <h5 class="fw-bold mb-3">Rs. <span id="product-price">110</span> / Kg</h5>
                                 <div class="d-flex mb-4">
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star text-secondary"></i>
@@ -200,8 +200,8 @@
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <p class="mb-4" id="product-description">The raspberry is the edible fruit of several plant species in the genus Rubus of the rose family, most of which are in the subgenus Idaeobatus.</p>
-                                <p class="mb-4">A raspberry is an aggregate fruit, developing from the numerous distinct carpels of a single flower.</p>
+                                <p class="mb-4" id="product-description">The orange originated in a region encompassing Southern China, Northeast India, and Myanmar; the earliest mention of the sweet orange was in Chinese literature in 314 BC.</p>
+                                <p class="mb-4">Orange trees are widely grown in tropical and subtropical areas for their sweet fruit.</p>
                                 <div class="input-group quantity mb-5" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-minus rounded-circle bg-light border">
@@ -231,11 +231,11 @@
         
                 // Get the product details
                 const product = {
-                    id: 2, // Unique ID for Apricots
+                    id: 1, // Unique ID for Apricots
                     name: document.getElementById('product-name').textContent.trim(),
                     price: parseFloat(document.getElementById('product-price').textContent.trim()),
                     quantity: parseInt(document.getElementById('quantity').value.trim()),
-                    image: 'img/fruite-item-2.jpg' // Image path for Apricots
+                    image: 'img/fruite-item-1.jpg' // Image path for Apricots
                 };
         
                 // Retrieve the cart from localStorage or initialize it
@@ -259,7 +259,6 @@
                 window.location.href = 'cart.html';
             });
         </script>
-        
          <!-- Footer Start -->
          <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
             <div class="container py-5">
