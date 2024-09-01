@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Step Verification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="verification-container">
+        <h2>Two-Step Verification</h2>
+        <p>We've sent a verification code to your phone. Enter the code below:</p>
+        <form id="verificationForm">
+            <input type="text" id="verificationCode" maxlength="6" placeholder="Enter verification code" required>
+            <button type="submit">Verify</button>
+        </form>
+        <p class="resend">Didn't receive the code? <a href="#">Resend</a></p>
+    </div>
+
+    <!-- Popup message -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <p>Incorrect verification code. Please try again.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

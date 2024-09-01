@@ -103,6 +103,9 @@
             alert(`You have searched for "${item}" ${searchCount} times. Would you like to know more about ${item}?`);
         }
  
+        // Check if the search term is a compound
+        suggestFruitsForCompound(item);
+ 
         // Redirect to the corresponding page based on the item name
         switch (item) {
             case 'banana':
@@ -135,6 +138,20 @@
             default:
                 alert('Item not found!');
                 break;
+        }
+    }
+
+    function suggestFruitsForCompound(compound) {
+        const compoundToFruitsMap = {
+            'vitamin d': ['oranges', 'bananas'],
+            'vitamin c': ['oranges', 'grapefruits', 'strawberries'],
+            'fiber': ['apples', 'pears', 'berries'],
+            'potassium': ['bananas', 'avocados', 'spinach'],
+            // Add more compounds and corresponding fruits as needed
+        };
+
+        if (compoundToFruitsMap[compound]) {
+            alert(`Fruits rich in ${compound}: ${compoundToFruitsMap[compound].join(', ')}.`);
         }
     }
 </script>
