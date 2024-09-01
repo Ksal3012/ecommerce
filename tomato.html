@@ -53,7 +53,7 @@
             </div>
             <div class="container px-0">
                 <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Fruitables</h1></a>
+                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Vegetable</h1></a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
@@ -185,14 +185,14 @@
                             <div class="col-lg-6">
                                 <div class="border rounded">
                                     <a href="#">
-                                        <img src="img/fruite-item-3.jpg" class="img-fluid rounded" alt="Image">
+                                        <img src="img/vegetable-item-1.jpg" class="img-fluid rounded" alt="Image">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <h4 class="fw-bold mb-3" id="product-name">Banana</h4>
-                                <p class="mb-3">Category: <span id="product-category">Fruit</span></p>
-                                <h5 class="fw-bold mb-3">Rs. <span id="product-price">60</span> / 12 piece</h5>
+                                <h4 class="fw-bold mb-3" id="product-name">Tomato</h4>
+                                <p class="mb-3">Category: <span id="product-category">Vegetable</span></p>
+                                <h5 class="fw-bold mb-3">Rs. <span id="product-price">40</span> / Kg</h5>
                                 <div class="d-flex mb-4">
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star text-secondary"></i>
@@ -200,8 +200,8 @@
                                     <i class="fa fa-star text-secondary"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <p class="mb-4" id="product-description">Banana is a very popular fruit due to its low price and high nutritive value.</p>
-                                <p class="mb-4">Banana is a rich source of carbohydrate and is rich in vitamins particularly vitamin B.</p>
+                                <p class="mb-4" id="product-description">Tomatoes contain many small seeds surrounded by jellylike pulp. This pulp contains most of the tomato's vitamin C.</p>
+                                <p class="mb-4">Tomato plants first grew wild in the Andes Mountains of South America.</p>
                                 <div class="input-group quantity mb-5" style="width: 100px;">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-minus rounded-circle bg-light border">
@@ -231,11 +231,11 @@
         
                 // Get the product details
                 const product = {
-                    id: 3, // Unique ID for Apricots
+                    id: 11, // Unique ID for Apricots
                     name: document.getElementById('product-name').textContent.trim(),
                     price: parseFloat(document.getElementById('product-price').textContent.trim()),
                     quantity: parseInt(document.getElementById('quantity').value.trim()),
-                    image: 'img/fruite-item-3.jpg' // Image path for Apricots
+                    image: 'img/vegetable-item-1.jpg' // Image path for Apricots
                 };
         
                 // Retrieve the cart from localStorage or initialize it
